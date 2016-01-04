@@ -1,0 +1,12 @@
+== README
+
+name: string
+address: text
+telephone: text
+occupation: string
+suburb: text
+
+- name must be present
+- address must be present
+- telephone must be present
+-

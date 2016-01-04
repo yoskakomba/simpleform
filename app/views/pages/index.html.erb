@@ -1,0 +1,176 @@
+<h2>Registration Form</h2>
+<hr/>
+ 
+
+
+<div class="row">
+  <div class="well col-md-8 col-md-offset-2">
+  
+   <%= simple_form_for @registration do |f| %>
+      <div class="row"><!-- name and last name -->
+      
+        <div class="col-md-6">
+          <%= f.label :name %>
+          <%= f.input_field :name, placeholder: 'Your first name' %>
+        </div>
+          
+        <div class="col-md-6">
+          <%= f.label :lastname %>
+          <%= f.input_field :lastname, placeholder: 'Your last name or family name' %>
+        </div>
+        
+      </div><!-- name and last name -->
+      
+      <div class="row"><!-- address postcode suburb -->
+      
+        <div class="col-md-4">
+          <%= f.label :address %>
+          <%= f.input_field :address, placeholder: 'Your address' %>
+        </div>
+          
+        <div class="col-md-4">
+          <%= f.label :suburb %>
+          <%= f.input_field :suburb, placeholder: 'Your sub urban area' %>
+        </div>
+        
+        <div class="col-md-4">
+          <%= f.label :postcode %>
+          <%= f.input_field :postcode, rows: 1, placeholder: 'Your postal code' %>
+        </div>
+        
+      </div><!-- address postcode suburb -->
+       
+      <div class="row"><!-- telephone and private health fund -->
+      
+        <div class="col-md-6">
+          <%= f.label :telephone %>
+          <%= f.input_field :telephone, placeholder: 'Mobile or landline number' %>
+         </div>
+       
+        <div class="col-md-6">
+          <%= f.label :private_health_fund %>
+          <%= f.input_field :private_health_fund, placeholder: 'Your private health fund ID' %>
+        </div>
+       
+      </div><!-- telephone and private health fund -->
+       
+      <div class="row">
+         <div class="col-md-4">
+          <%= f.label :email %>
+          <%= f.input_field :email, input_html: { maxlength: 20 }, placeholder: 'Your email address' %>
+         </div>
+         
+         <div class="col-md-4">
+           <%= f.input :reference, as: :collection_select,
+           collection: [
+           'Drive or Walk by',
+           'Google Online',
+           'Yellow Pages Online',
+           'Gift Voucher',
+           'Yellow Pages Paper Directory',
+           'Friend/Referral',
+           'Other'], prompt: 'How do you know us?' %>
+         </div>
+         
+         <div class="col-md-4">
+          <%= f.input :newsletter, as: :boolean, checked_value: true, unchecked_value: false, required: false, hint: '*receive newsletter from us?' %>
+         </div>
+      
+      </div><!-- email reference newsletter -->
+       
+      <div class="row">
+         <div class="col-md-4">
+          <%= f.label :occupation %>
+          <%= f.input_field :occupation %>
+         </div>
+         
+         <div class="col-md-4">
+          <%= f.label :exercise_routine %>
+          <%= f.input_field :exercise_routine, placeholder: 'Your daily exercise routine' %>
+         </div>
+         
+         <div class="col-md-4">
+          <%= f.label :conditions %>
+          <%= f.input_field :conditions, as: :collection_select,
+           collection: [
+           'Allergies/Asthma',
+           'Open Wounds',
+           'Numbness/Tinglint',
+           'Skin Condition',
+           'Headaches/Migraine',
+           'Recent Illness/Surgery',
+           'Varicose Veins',
+           'Diabetes',
+           'Osteoporosis'], prompt: 'Choose any body conditions apply to you' %>
+         </div>
+       
+      </div><!-- occupation, exercise routine, body conditions -->
+       
+      <div class="row">
+         <div class="col-md-6">
+           <%= f.label :past_medical_history %>
+           <%= f.input_field :past_medical_history, placeholder: 'Your past medical history within 5 years', required: false %>
+         </div>
+         
+         <div class="col-md-6">
+           <%= f.label :medication %>
+           <%= f.input_field :medication, placeholder: 'Your medication history within 5 years', required: false %>
+         </div>
+
+       </div><!-- past medical history and medication -->
+       
+      <div class="row">
+       
+        <div class="col-md-6">
+          <%= f.label :symptoms %>
+          <%= f.input_field :symptoms, placeholder: 'Do you have any symptoms before we proceed your massage therapy', required: false %>
+        </div>
+          
+        <div class="col-md-6">
+          <%= f.label :other_experience %>
+          <%= f.input_field :other_experience, placeholder: 'Do you have any other experience before we proceed your therapy', required: false %>
+        </div>
+         
+      </div><!-- Symptoms and other experience -->
+       
+      <div class="row">
+      
+        <div class="col-md-6">
+          
+          <%= f.input :preference, as: :collection_select,
+          collection: [
+            'Quiet',
+            'Treatment description',
+            'Gentle Treatment'],
+             prompt: '*Preference on your therapy' %>
+        </div>
+        
+        <div class="col-md-6">
+          <%= f.input :body_area, as: :collection_select,
+          collection: [
+            'face',
+            'Head',
+            'Chest',
+            'Stomach',
+            'Back',
+            'Buttocks',
+            'Arms',
+            'Legs',
+            'Hands',
+            'Feet'],
+           prompt: 'Choose body area you want to delete in your therapy' %>
+            
+            
+        </div>
+        
+      </div>
+       
+      
+      
+      <%= f.submit 'Submit', class: "btn btn-success" %>
+    
+    <% end %>
+  </div>
+
+</div><br>
+<hr/>

@@ -1,0 +1,73 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+#logo {
+    width: 100%;
+    left: 0;
+    padding-top: 2px;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    
+    }
+    
+    
+#logo:hover {
+    color: white;
+    text-decoration: none;
+    }
+    
+body {
+    padding-top: 80px;
+    
+    }
+    
+hr {
+    max-width: 100%;
+    }
+    
+h2 {
+    text-align: center;
+    font-size: 2em;
+    }
+
+.navbar-nav {
+    padding-top: 5px;
+    padding-left: 10px;
+    }
+    
+.btn {
+    margin-bottom: 10px;
+    }
+    
+.well {
+    background-color: #EDEDED;
+    
+    }
+    
+input, textarea, select, .uneditable-input {
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    
+
+    }
+    
+input {
+    height: auto !important;
+    color: #2E2E2E;
+    }
+    
+input.radio_buttons.inline label.radio{
+  display: inline-block;
+}
+
+.navbar-form {
+    padding-top: 5px;
+    
+    }
+    
